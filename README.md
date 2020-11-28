@@ -10,6 +10,8 @@ FlameCens is an application for visualization of expressive music performance. I
 
 In the FlamceCens-pitch alternation, the flame changes color according to the pitch of the current note. The alternation works only for monophonic music (polyphonic extention may be developed as future work)
 
+![Screenshot](sample.png)
+
 
 ## Usage
 
