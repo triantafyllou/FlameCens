@@ -24,7 +24,7 @@ file2     :The fle to be compared with (required - MIDI or .wav format)
 artist1   :The artist in file1 (optional - text)  
 artist2   :The artist in file2 (optional - text)  
 title     :Title of the sonf (optional - text)  
-tuning    :Key transposition in semitones (optional - interger)  
+tuning    :Key transposition in semitones (optional - integer)  
 </pre>
   
 Artist1, artist2 and title are optional information to be displayed in the visualization. "Uknown" will be displayed in case they are not defined
