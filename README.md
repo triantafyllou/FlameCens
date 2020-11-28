@@ -14,3 +14,23 @@ In the FlamceCens-pitch alternation, the flame changes color according to the pi
 ## Usage
 
 *python FlameCens.py file1 file2 artist1 artist2 title tuning*
+
+file1     :The audio file to be visualized (required - .wav format )
+file2     :The fle to be compared with (required - MIDI or .wav format)
+artist1   :The artist in file1 (optional - text)
+artist2   :The artist in file2 (optional - text)
+title     :Title of the sonf (optional - text)
+tuning    :Key transposition in semitones (optional - interger)
+
+Artist1, artist2 and title are optional information to be displayed in the visualization. "Uknown" will be displayed in case they are not defined
+Tuning is a parameter required in case the one of the compared tracks is shifted to another key
+
+If the application is about to compare a track to its musical score imported in MIDI format, the MIDI file is converted to WAV in real time (playing / recording procedure). The real time procedure was chosen in order to make the application cross-platform and independent of third party synthesizer software
+
+## Required Python Modules
+1)  librosa
+2)  pyGame
+3)  SciPy
+4)  Wave
+5)  PyAudio
+6)  Numba
