@@ -41,3 +41,7 @@ fire_yellow.png file is required for the polyphinic version (FlameCens.py) of th
 4)  Wave
 5)  PyAudio
 6)  Numba
+
+## Sample Videos
+
+[Beethoven - Sonata No.26 by Arhtur Rubinstein -Compared to Score](https://www.youtube.com/watch?v=FawzkI_ZXLI)
