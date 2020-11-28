@@ -10,6 +10,7 @@ FlameCens is an application for visualization of expressive music performance. I
 
 In the FlamceCens-pitch alternation, the flame changes color according to the pitch of the current note. The alternation works only for monophonic music (polyphonic extention may be developed as future work)
 
+In the screenshot below you can see a sample of the visualization. Sonata No.26 of Beethoven played by pianist James Wright Webber is compared to a) musical score imported in MIDI format and b) to the same song as performed by Arthur Rubinstein
 ![Screenshot](sample.png)
 
 
