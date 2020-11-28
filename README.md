@@ -27,6 +27,8 @@ Tuning is a parameter required in case the one of the compared tracks is shifted
 
 If the application is about to compare a track to its musical score imported in MIDI format, the MIDI file is converted to WAV in real time (playing / recording procedure). The real time procedure was chosen in order to make the application cross-platform and independent of third party synthesizer software
 
+fire_yellow.png file is required for the polyphinic version (FlameCens.py) of the application.
+
 ## Required Python Modules
 1)  librosa
 2)  pyGame
