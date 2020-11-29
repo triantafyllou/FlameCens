@@ -1,16 +1,15 @@
 # FlameCens
 
 
-
-FlameCens is an application written in Python for visualizing the musical expression of audio files. The application visualize dynamics and temporal deviation compared to score or another cover of the same song.
+FlameCens is a Python application for comparing two music performances and providing a visualisation of their expressive deviations in tempo and dynamics.
 
 
 ## Overview
-FlameCens is an application for visualization of expressive music performance. It compares an audio file to its corresponding musical score (imported in MIDI format) or to another performance of the same song by another artist (also an audio file). The application displays a dynamically modified "flame" texture that changes size according to the dynamics and angle according to the temporal deviation of music, compared to the target file. The vertical axis shows the position of zero temporal deviation while the horizontal axis shows the temporal deviation in seconds.
+FlameCens is an application for visualisation of expressive music performance. It compares an audio file to its corresponding musical score (imported in MIDI format) or to another performance of the same song by another artist (also an audio file). The application displays a dynamically modified "flame" texture that changes size according to the dynamics and angle according to the temporal deviation of music, compared to the target file. The vertical axis shows the position of zero temporal deviation while the horizontal axis shows the temporal deviation in seconds.
 
-In the FlamceCens-pitch alternation, the flame changes color according to the pitch of the current note. The alternation works only for monophonic music (polyphonic extention may be developed as future work)
+FlameCens-pitch is a variation of the application in which the flame changes color according to the pitch of the current note. The vaiation works only for monophonic music (polyphonic extention may be developed as future work)
 
-In the screenshot below you can see a sample of the visualization. Sonata No.26 of Beethoven played by pianist James Wright Webber is compared to a) musical score imported in MIDI format and b) to the same song as performed by Arthur Rubinstein
+In the screenshot below you can see a sample of the visualisation. Sonata No.26 of Beethoven played by pianist James Wright Webber is compared to a) musical score imported in MIDI format and b) to the same song as performed by Arthur Rubinstein
 ![Screenshot](sample.png)
 
 
@@ -27,7 +26,7 @@ title     :Title of the sonf (optional - text)
 tuning    :Key transposition in semitones (optional - integer)  
 </pre>
   
-Artist1, artist2 and title are optional information to be displayed in the visualization. "Uknown" will be displayed in case they are not defined
+Artist1, artist2 and title are optional information to be displayed in the visualisation. "Uknown" will be displayed in case they are not defined
 Tuning is a parameter required in case the one of the compared tracks is shifted to another key
 
 If the application is about to compare a track to its musical score imported in MIDI format, the MIDI file is converted to WAV in real time (playing / recording procedure). The real time procedure was chosen in order to make the application cross-platform and independent of third party synthesizer software
