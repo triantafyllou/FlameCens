@@ -46,3 +46,7 @@ fire_yellow.png file is required for the polyphinic version (FlameCens.py) of th
 [Beethoven - Sonata No.26 by Arhtur Rubinstein - Compared to Score](https://www.youtube.com/watch?v=FawzkI_ZXLI)
 
 [Beethoven - Sonata No.26 by James Wright Webber - Compared to Arthur Rubinstein](https://www.youtube.com/watch?v=EgUJEWsE3SI)
+
+[Paganini - Caprice No.4 in Cm (Maestoso) by Michael Rabin - Compared to Score](https://www.youtube.com/watch?v=sF8l6LibRqM)
+
+
