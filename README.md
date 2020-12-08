@@ -5,7 +5,7 @@ FlameCens is a Python application for comparing two music performances and provi
 
 
 ## Overview
-FlameCens is an application for visualisation of expressive music performance. It compares an audio file to its corresponding musical score (imported in MIDI format) or to another performance of the same song by another artist (also an audio file). The application displays a dynamically modified "flame" texture that changes size according to the dynamics and angle according to the temporal deviation of music, compared to the target file. The vertical axis shows the position of zero temporal deviation while the horizontal axis shows the temporal deviation in seconds. The application also creates a .csv file that that records the temporal deviation and the diffrence in dynamics (measured in db).
+FlameCens is an application for visualisation of expressive music performance. It compares an audio file to its corresponding musical score (imported in MIDI format) or to another performance of the same song by another artist (also an audio file). The application displays a dynamically modified "flame" texture that changes size according to the dynamics and angle according to the temporal deviation of music, compared to the target file. The vertical axis shows the position of zero temporal deviation while the horizontal axis shows the temporal deviation in seconds. The application also creates a .csv file that records the temporal deviation and the diffrence in dynamics (measured in db).
 
 FlameCens-pitch is a variation of the application in which the flame changes color according to the pitch of the current note. The vaiation works only for monophonic music (polyphonic extention may be developed as future work)
 
