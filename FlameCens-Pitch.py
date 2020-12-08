@@ -144,20 +144,44 @@ path = compute_optimal_warping_path(D)
 #----------Warping Path in Time Domain-------------------------
 path_s = path * 512 / fs1 #512 is the hop size
 
-#---------------mapping of temporal deviation-----------------
+#---------------dynamics to db-------------------
+S1 = np.abs(librosa.stft(x1))
+S2 = np.abs(librosa.stft(x2))
+
+S1_mean=np.sum(S1,axis=0)
+S2_mean=np.sum(S2,axis=0)
+pref=max(np.max(S1),np.max(S2))
+S1db=librosa.amplitude_to_db(S1_mean,ref=pref)
+S2db=librosa.amplitude_to_db(S2_mean,ref=pref)
+
+#---------------Initializing logfile-------------------
+logfile="FlameCens_"+file2+"_"+file1+"_dev.csv"
+f=open(logfile,"w")
+f.write("Time(sec),Tempo(sec),Dynamics(db)\n")
+f.close()
+
+#---------------mapping of temporal deviation and dynamics difference-----------------
 dev=[]
+db=[]
+f=open(logfile,"a")
 for i in range (1,len(path_s)):
     if path_s[i-1,0] != path_s[i,0]:
+        time_diff=path_s[i-1,1]-path_s[i-1,0] #temporal deviation
         dev.append(path_s[i-1,1]-path_s[i-1,0])
+        timing=np.round_(path_s[i-1,0],2)
+        indexs1=path[i-1,1]
+        indexs2=path[i-1,0]
+        db_diff=S2db[indexs2]-S1db[indexs1] #dynamics difference in db
+        db.append(db_diff)
+        f.write("%s,%s,%s\n" % (str(timing),str(np.round(time_diff,2)),str(np.round(db_diff,2))))
+        
+f.close()
 dev=np.asarray(dev)
+db=np.asarray(db)
 point=max(abs(dev))
 dev_norm=dev/point
 point=np.round(point,2)
-
-#---------------mapping of dynamics-------------------
-S = np.abs(librosa.stft(x2))
-S2=np.sum(S,axis=0)
-S2=S2/(np.max(S2)/4)
+S=np.interp(db, (db.min(), db.max()), (0, +8))
 
 #-------------mapping pitch class---------------------
 note=np.argmax(chr2,axis=0)
@@ -186,7 +210,7 @@ def particles(S,fs,dev,dev_sec,point,namea,nameb,title,note):
     # 7=color(RGB)
     #8=influence
     
-    particles = 240
+    particles = 720
     particle_xysize = []
     while particles > 0:
         particle_xysize.append([0,0,0,0,0,0,0,(0,0,0),(0,0)])
@@ -265,7 +289,7 @@ def particles(S,fs,dev,dev_sec,point,namea,nameb,title,note):
             
             if particle_xysize[element][2] > 0:
                 particle_xysize[element][2] -= 0.5
-                velocity[element] += 8
+                velocity[element] += 2
             else:
                 while True:
                     b = datetime.datetime.now()
@@ -315,7 +339,7 @@ def particles(S,fs,dev,dev_sec,point,namea,nameb,title,note):
         pygame.display.update()
         FPSCLOCK.tick(FPS)
 
-particles(S2,fs2,dev_norm,dev,point,a,b,title,note)
+particles(S,fs2,dev_norm,dev,point,a,b,title,note)
 
 
  
