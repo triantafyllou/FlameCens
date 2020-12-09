@@ -18,11 +18,11 @@ In the screenshot below you can see a sample of the visualisation. Sonata No.26 
 *python FlameCens.py file1 file2 artist1 artist2 title tuning*
   
 <pre>
-file1     :The audio file to be visualized (required - .wav format )  
-file2     :The fle to be compared with (required - MIDI or .wav format)  
+file1     :The fle to be compared with (required - MIDI or .wav format) 
+file2     :The audio file to be visualized (required - .wav format )  
 artist1   :The artist in file1 (optional - text)  
 artist2   :The artist in file2 (optional - text)  
-title     :Title of the sonf (optional - text)  
+title     :Title of the song (optional - text)  
 tuning    :Key transposition in semitones (optional - integer)  
 </pre>
   
