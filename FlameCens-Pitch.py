@@ -106,7 +106,7 @@ def compute_accumulated_cost_matrix(C):
     N, M = C.shape
     D = np.zeros((N, M))
     D[:, 0] = np.cumsum(C[:, 0])
-    D[0, :] = C[0, :]
+    D[0, :] = np.cumsum(C[0, :])
     for n in range(1, N):
         for m in range(1, M):
             D[n, m] = C[n, m] + min(D[n-1, m], D[n, m-1], D[n-1, m-1])
@@ -120,7 +120,7 @@ def compute_optimal_warping_path(D):
 
     N, M = D.shape
     n = N - 1
-    m = D[N - 1, :].argmin()
+    m = M - 1
     P = [(n, m)]
 
     while n > 0:
