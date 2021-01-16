@@ -1,6 +1,5 @@
 #------------importing modules------------
 import numpy as np
-import matplotlib.pyplot as plt
 import librosa 
 import librosa.display
 import scipy
@@ -11,7 +10,6 @@ from numba import jit
 import wave  
 import pyaudio
 import os
-import sys
 
 if (len(sys.argv)<3):
     print("The application needs at least two audio files as input")
@@ -22,7 +20,7 @@ file2=sys.argv[2]
 a=sys.argv[3] if len(sys.argv) >3  else "Uknown"
 b=sys.argv[4]if len(sys.argv) >4  else "Uknown"
 title=sys.argv[5] if len(sys.argv) >5  else "Uknown"
-tuning=sys.argv[6] if len(sys.argv) >6  else 0
+tuning=int(sys.argv[6]) if len(sys.argv) >6  else 0
 
 def play_music(file):
     pygame.init()
@@ -91,8 +89,10 @@ t2=np.arange(0,len(x2))/float(fs2)
 #-------------CENS Features - Normalized with Manhatann Norm-----------------------
 l=41
 chr1=librosa.feature.chroma_cens(y=x1,sr=fs1,norm=1,win_len_smooth=l)
-chr2=librosa.feature.chroma_cens(y=x2,sr=fs2,norm=1,tuning=int(tuning), win_len_smooth=l)
-
+if tuning==0:
+    chr2=librosa.feature.chroma_cens(y=x2,sr=fs2,norm=1,win_len_smooth=l)
+else:
+    chr2=librosa.feature.chroma_cens(y=x2,sr=fs2,norm=1,tuning=tuning, win_len_smooth=l)
 #---------------Cost Matrix----------------------
 xt=np.transpose(chr1)
 yt=np.transpose(chr2)
@@ -155,11 +155,12 @@ S1db=librosa.amplitude_to_db(S1_mean,ref=pref)
 S2db=librosa.amplitude_to_db(S2_mean,ref=pref)
 
 #---------------Initializing logfile-------------------
-logfile="FlameCens_"+file2+"_"+file1+"_dev.csv"
+logfile="FlameCens_"+file1+"_"+file2+"_dev.csv"
 f=open(logfile,"w")
 f.write("Time(sec),Tempo(sec),Dynamics(db)\n")
 f.close()
 
+#---------------mapping of temporal deviation and dynamics difference-----------------
 #---------------mapping of temporal deviation and dynamics difference-----------------
 dev=[]
 db=[]
@@ -168,18 +169,21 @@ for i in range (1,len(path_s)):
     if path_s[i-1,0] != path_s[i,0]:
         time_diff=path_s[i-1,1]-path_s[i-1,0] #temporal deviation
         dev.append(path_s[i-1,1]-path_s[i-1,0])
-        timing=np.round_(path_s[i-1,0],2)
+        timing=np.round_(path_s[i-1,0],3)
         indexs1=path[i-1,1]
         indexs2=path[i-1,0]
         db_diff=S2db[indexs2]-S1db[indexs1] #dynamics difference in db
         db.append(db_diff)
-        f.write("%s,%s,%s\n" % (str(timing),str(np.round(time_diff,2)),str(np.round(db_diff,2))))
+        f.write("%s,%s,%s\n" % (str(timing),str(np.round(time_diff,3)),str(np.round(db_diff,3))))
         
 f.close()
 dev=np.asarray(dev)
 db=np.asarray(db)
 point=max(abs(dev))
-dev_norm=dev/point
+if point!=0:
+    dev_norm=dev/point
+else:
+    dev_norm=dev
 point=np.round(point,2)
 S=np.interp(db, (db.min(), db.max()), (0, +8))
 
