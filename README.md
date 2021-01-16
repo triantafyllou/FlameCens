@@ -43,7 +43,7 @@ fire_yellow.png file is required for the polyphinic version (FlameCens.py) of th
 
 ## Sample Videos
 
-[Beethoven - Sonata No.26 by Arhtur Rubinstein - Compared to Score](https://studio.youtube.com/video/nGV7Dfx6GsQ/edit)
+[Beethoven - Sonata No.26 by Arhtur Rubinstein - Compared to Score](https://www.youtube.com/watch?v=nGV7Dfx6GsQ)
 
 [Beethoven - Sonata No.26 by James Wright Webber - Compared to Arthur Rubinstein](https://www.youtube.com/watch?v=nGV7Dfx6GsQ)
 
