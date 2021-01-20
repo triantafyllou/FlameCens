@@ -41,6 +41,14 @@ fire_yellow.png file is required for the polyphinic version (FlameCens.py) of th
 5)  PyAudio
 6)  Numba
 
+## Acknowledgements
+FlameCens  was developed as a postgraduate project thesis in part requirement of the MSc in Sound and Music Technologies offered by the Department of Sound and 
+Music Technologies of the Hellenic Mediterranean University (HMU).
+
+Links
+
+[Dept. of Music Technology and Acoustics] (https://mta.hmu.gr/en)
+
 ## Sample Videos
 
 [Beethoven - Sonata No.26 by Arhtur Rubinstein - Compared to Score](https://www.youtube.com/watch?v=Rub3LwPp2Zw)
