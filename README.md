@@ -45,9 +45,9 @@ fire_yellow.png file is required for the polyphinic version (FlameCens.py) of th
 FlameCens  was developed as a postgraduate project thesis in part requirement of the MSc in Sound and Music Technologies offered by the Department of Sound and 
 Music Technologies of the Hellenic Mediterranean University (HMU).
 
-Links
+<ins>Links:</ins>
 
-[Dept. of Music Technology and Acoustics] (https://mta.hmu.gr/en)
+Dept. of Music Technology and Acoustics: (https://mta.hmu.gr/en)
 
 ## Sample Videos
 
