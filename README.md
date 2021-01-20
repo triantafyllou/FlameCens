@@ -47,7 +47,7 @@ Music Technologies of the Hellenic Mediterranean University (HMU).
 
 <ins>Links:</ins>
 
-Dept. of Music Technology and Acoustics: (https://mta.hmu.gr/en)
+Dept. of Music Technology and Acoustics: https://mta.hmu.gr/en
 
 ## Sample Videos
 
