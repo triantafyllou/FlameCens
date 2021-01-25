@@ -42,11 +42,8 @@ fire_yellow.png file is required for the polyphinic version (FlameCens.py) of th
 6)  Numba
 
 ## Acknowledgements
-FlameCens has been developed as a postgraduate project thesis in part requirement of the MSc in Sound and Music Technologies offered by the [Department of Music Technology and Acoustics](https://mta.hmu.gr/) of the Hellenic Mediterranean University (HMU).
+FlameCens has been developed as a postgraduate project thesis in part requirement of the MSc in Sound and Music Technologies offered by the [Department of Music Technology and Acoustics](https://mta.hmu.gr/) of the [Hellenic Mediterranean University (HMU)](https://www.hmu.gr/).
 
-<ins>Links:</ins>
-
-Dept. of Music Technology and Acoustics: https://mta.hmu.gr/en
 
 ## Sample Videos
 
@@ -56,4 +53,5 @@ Dept. of Music Technology and Acoustics: https://mta.hmu.gr/en
 
 [Paganini - Caprice No.4 in Cm (Maestoso) by James Ehnes - Compared to Michael Rabin](https://www.youtube.com/watch?v=7EBfmDLQJ38)
 
-
+## Contact
+Yiannis Triantafyllou: triantafyllou.j@gmail.com
