@@ -42,7 +42,7 @@ fire_yellow.png file is required for the polyphinic version (FlameCens.py) of th
 6)  Numba
 
 ## Acknowledgements
-FlameCens  was developed as a postgraduate project thesis in part requirement of the MSc in Sound and Music Technologies offered by the  Department of Music Technology and Acoustics of the Hellenic Mediterranean University (HMU).
+FlameCens has been developed as a postgraduate project thesis in part requirement of the MSc in Sound and Music Technologies offered by the   Department of Music Technology and Acoustics of the Hellenic Mediterranean University (HMU).
 
 <ins>Links:</ins>
 
